@@ -1,15 +1,17 @@
 # Imberion Brand Kit
 
-Hojas de estilo, texturas, logos, iconos y snippets HTML del sistema visual de Imberion. Este repo es la fuente pública del kit: lo que se necesita para construir un entregable HTML (propuesta, deck, dashboard, one-pager) con la identidad de Imberion.
+Hojas de estilo, texturas, logos, iconos y snippets HTML del sistema visual de Imberion. Es lo que se necesita para construir un entregable HTML (propuesta, deck, dashboard, one-pager) con la identidad de Imberion, servido por CDN.
 
 Material propietario de Imberion. Público para servirse vía CDN y para colaboradores de la firma. No es open source.
+
+> **Este repo es un espejo generado.** La fuente de verdad del kit es el repositorio interno de Imberion; aquí se publica de forma automática para servirse por jsDelivr. No editar los assets aquí: los cambios se hacen en la fuente y se publican solos. (`linkedin/` es la excepción: lo alimenta su propio flujo de publicación.)
 
 ## Qué hay aquí
 
 - `css/` Hojas de estilo canónicas (base, componentes, charts, deck, texturas).
 - `assets/textures/` Texturas editoriales de fondo en PNG. `assets/textures/lite/` son las versiones JPEG comprimidas (~900px) para embeber en decks autocontenidos.
 - `logos_svg/` Logos en SVG (con y sin tagline, navy y blanco) y favicons.
-- `iconos/` 18 iconos editoriales de línea propia (trazo 1.25px, navy). Ver `iconos/_referencia.html`.
+- `iconos/` 18 iconos editoriales de línea propia (trazo 1.25px, navy). Ver `iconos/_referencia.html`. `iconos/industrias/` agrega el set por industria (retail, cpg, telco, farma, automotriz, logistics, building materials, b2b industrial, servicios b2b/b2c).
 - `snippets_html/` Bloques HTML reutilizables. El principal es `plantilla_deck.html`, el chasis estándar de decks (16:9, autocontenido, CSS y logos embebidos).
 - `js/` Componentes JavaScript de marca. El principal es `imberion_tour.js` (tour guiado: welcome modal + spotlight + tooltip), pareja de `css/imberion_tour.css`.
 
