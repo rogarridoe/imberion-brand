@@ -19,7 +19,9 @@
    =========================================================================== */
 
 /* ---------- Variables de marca ---------- */
+/* IMBERION-TOKENS:base — generado desde imberion-tokens.json. No editar a mano. */
 :root {
+
   /* Paleta primaria */
   --navy: #0A1828;
   --navy-80: rgba(10, 24, 40, .8);
@@ -29,37 +31,72 @@
   --navy-12: rgba(10, 24, 40, .12);
   --navy-06: rgba(10, 24, 40, .06);
 
-  /* Paleta secundaria y acentos */
+  /* Paleta secundaria */
   --gray-blue: #6F859C;
   --beige: #CFCBC6;
   --beige-dark: rgba(207, 203, 198, .6);
   --white: #fff;
 
-  /* Acentos de marca (formalizados 2026-06) */
-  /* Petroleo. Accent primario: frio, tecnico, premium. La "senal". */
-  --petrol:        #1C5F6B;  /* base. CTAs, highlight, linea protagonista */
-  --petrol-deep:   #11454E;  /* texto/iconos sobre claro (AA en papel) */
-  --petrol-bright: #52A0AC;  /* sobre navy. lineas, KPI, estado activo */
-  --petrol-12:     rgba(28, 95, 107, .12);  /* fills callout/pill en claro */
-  --petrol-06:     rgba(28, 95, 107, .06);  /* washes, hover */
-  /* Ochre. Accent secundario, rol de datos. */
-  --ochre:         #A88A3A;
-  --ochre-deep:    #7E641F;
-  --ochre-bright:  #C7A85A;
-  --ochre-12:      rgba(168, 138, 58, .14);
-
-  /* Layout */
-  --max: 1140px;
-  --r: 4px;
+  /* Acentos de marca: petroleo (senal) + ochre (datos) */
+  --petrol: #1C5F6B;
+  --petrol-12: rgba(28, 95, 107, .12);
+  --petrol-06: rgba(28, 95, 107, .06);
+  --petrol-deep: #11454E;
+  --petrol-bright: #52A0AC;
+  --ochre: #A88A3A;
+  --ochre-12: rgba(168, 138, 58, .14);
+  --ochre-deep: #7E641F;
+  --ochre-bright: #C7A85A;
 
   /* Tipografia */
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Monaco, Consolas, monospace;
 
-  /* Logo inline (SVG base64). Para uso en backgrounds vi a CSS var,
-     ej. .slide-mark { background-image: var(--logo); }
-     En contextos oscuros, aplicar filter: invert(1) brightness(1.15). */
+  /* Layout */
+  --max: 1140px;
+  --r: 4px;
+
+  /* Capa semantica: alias --imb-* + roles. Apuntan a la paleta de arriba. */
+  --imb-navy: var(--navy);
+  --imb-navy-80: var(--navy-80);
+  --imb-navy-60: var(--navy-60);
+  --imb-navy-40: var(--navy-40);
+  --imb-navy-20: var(--navy-20);
+  --imb-navy-12: var(--navy-12);
+  --imb-navy-06: var(--navy-06);
+  --imb-slate: var(--gray-blue);
+  --imb-paper: var(--beige);
+  --imb-white: var(--white);
+  --imb-petrol: var(--petrol);
+  --imb-petrol-deep: var(--petrol-deep);
+  --imb-petrol-bright: var(--petrol-bright);
+  --imb-ochre: var(--ochre);
+  --imb-ochre-deep: var(--ochre-deep);
+  --imb-ochre-bright: var(--ochre-bright);
+  --bg: var(--beige);
+  --bg-dark: var(--navy);
+  --bg-surface: var(--white);
+  --fg: var(--navy);
+  --fg-muted: var(--navy-60);
+  --fg-subtle: var(--navy-40);
+  --fg-inverse: var(--white);
+  --border: var(--navy-12);
+  --border-strong: var(--navy-20);
+  --eyebrow: var(--gray-blue);
+  --accent: var(--petrol);
+  --accent-strong: var(--petrol-deep);
+  --accent-on-dark: var(--petrol-bright);
+  --accent-data: var(--ochre);
+  --font-serif: var(--font-display);
+  --font-sans: var(--font-body);
+}
+/* IMBERION-TOKENS:base:fin */
+
+/* Logo inline (SVG base64). Asset, no token: se edita a mano aqui.
+   Uso en backgrounds via CSS var (background-image: var(--logo)).
+   En contextos oscuros: filter: invert(1) brightness(1.15). */
+:root {
   --logo: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDQwMCA4NSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjI7Ij4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNDE0NTA4LDAsMCwwLjQxNDUwOCwyMC42MTYzLDQ0Ljc3MjcpIj4KICAgICAgICA8dGV4dCB4PSIwcHgiIHk9IjBweCIgc3R5bGU9ImZvbnQtZmFtaWx5OidHZW9yZ2lhJywgc2VyaWY7Zm9udC1zaXplOjE1MHB4O2ZpbGw6cmdiKDI4LDQzLDU2KTsiPkk8dHNwYW4geD0iNjcuNDQ3cHggMjE1LjUzNHB4IDMyMi42MDVweCA0MjkuNjA0cHggNTQzLjg1M3B4ICIgeT0iMHB4IDBweCAwcHggMHB4IDBweCAiPk1CRVJJPC90c3Bhbj48L3RleHQ+CiAgICA8L2c+CiAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjQxNDUwOCwwLDAsMC40MTQ1MDgsLTE1Mi45NTMsLTQ0LjM1MjMpIj4KICAgICAgICA8cGF0aCBkPSJNMTA5MiwxMDdDMTEyNC4wMSwxMDcgMTE1MCwxMzIuOTg5IDExNTAsMTY1QzExNTAsMTk3LjAxMSAxMTI0LjAxLDIyMyAxMDkyLDIyM0MxMDU5Ljk5LDIyMyAxMDM0LDE5Ny4wMTEgMTAzNCwxNjVDMTAzNCwxMzIuOTg5IDEwNTkuOTksMTA3IDEwOTIsMTA3Wk0xMDQ5LjU2LDE2OS45MDlDMTA0OS41NSwxNzMuNzY0IDEwNDkuNDYsMTcyLjk0NyAxMDQ5LjU1LDE3My4wODhDMTA1MS43NSwxNzYuNTQ3IDEwNTQuOTMsMTYxLjMxIDEwNTQuNTIsMTY0LjMxMkMxMDU0LjQxLDE2NS4xMjIgMTA1NS4zNywxNjIuMjM2IDEwNTYuMTgsMTYwLjAzNEMxMDU3LjY5LDE1NS45NjkgMTA2MS40MSwxNTQuMjY2IDEwNjMuNjgsMTUyLjk5MkMxMDY4LjE2LDE1MC40NzkgMTA3Mi40NCwxNTAuMDgyIDEwNzQuOTYsMTUxLjIwNUMxMDc4LjAxLDE1Mi41NjUgMTA3OS4xMiwxNTMuODc5IDEwODAuODUsMTU1LjA0NUMxMDgyLjU3LDE1Ni4yMTEgMTA4NC42MywxNTcuNzg2IDEwODUuNzMsMTU5Ljk1NUMxMDg2LjgyLDE2Mi4xMjQgMTA4Ny45NSwxNjMuMjE5IDEwODkuMiwxNjYuMjM2QzEwOTAuNzYsMTY5LjYzMSAxMDkxLjkzLDE3MC45NzggMTA5My42NiwxNzMuMjc0QzEwOTUuMzgsMTc1LjU3IDEwOTguNjgsMTc4Ljc5NiAxMTAxLjM1LDE3OS45NjNDMTEwNC4wMiwxODEuMTMxIDExMDYuODcsMTgxLjcyNCAxMTExLjE3LDE4MS43MzNDMTExNi41MSwxODEuNzQ1IDExMjAuOTQsMTgwLjk1MyAxMTI0LjQ1LDE3OS4zNTlDMTEyNy45NiwxNzcuNzY1IDExMzAuNjQsMTc1LjU3MyAxMTMyLjQ4LDE3Mi43ODJDMTEzMy4xNCwxNzEuNzcgMTEzMy42NywxNzAuNzA0IDExMzQuMTUsMTY5LjU5NkMxMTM0Ljk4LDE2Ny42NDkgMTEzNS42NSwxNjUuNTY1IDExMzUuMywxNjQuMDk1QzExMzQuMzEsMTU5Ljg5NiAxMTMwLjEyLDE2OC4zMjcgMTEyOC40MiwxNjkuODYyQzExMjYuMDMsMTcyLjAyMyAxMTIzLjI1LDE3NC4xNDIgMTEyMS4yMSwxNzUuMjk5QzExMTkuMTYsMTc2LjQ1NyAxMTE2LjQsMTc3LjM2NSAxMTEyLjg0LDE3Ny4zNTdDMTEwOS45LDE3Ny4zNTEgMTEwNy41LDE3Ni44OTQgMTEwNS44OCwxNzYuMDExQzExMDQuMjYsMTc1LjEyOSAxMTAyLjI0LDE3NC42ODggMTEwMS4xNCwxNzIuOTI3QzExMDAuMDQsMTcxLjE2NiAxMDk2LjUsMTY4LjAxNSAxMDk1LjI1LDE2NS40MzdDMTA5My41OCwxNjEuNzI4IDEwOTIuNjIsMTYxLjY1NSAxMDkxLjMsMTU4LjE5NkMxMDkwLjEsMTU1LjA0NCAxMDg4LjE3LDE1Mi4yMzEgMTA4NS40NCwxNTAuNzE4QzEwODIuNzIsMTQ5LjIwNSAxMDc5LjcxLDE0NS40OSAxMDc0Ljc5LDE0NS40OEMxMDY3LjE0LDE0NS40NjMgMTA2MC4yNywxNDUuNjczIDEwNTcuMywxNTAuODExQzEwNTYuMTcsMTUyLjc3NCAxMDU1LjM2LDE1Mi43MzYgMTA1NC41MywxNTQuNzA0QzEwNTMuMzQsMTU3LjU1OCAxMDQ5LjU3LDE2Ni41NjQgMTA0OS41NiwxNjkuOTA5WiIgc3R5bGU9ImZpbGw6cmdiKDI4LDQzLDU2KTsiLz4KICAgIDwvZz4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNDE0NTA4LDAsMCwwLjQxNDUwOCwzMjkuNTM0LDQ0LjM1MjMpIj4KICAgICAgICA8dGV4dCB4PSIwcHgiIHk9IjBweCIgc3R5bGU9ImZvbnQtZmFtaWx5OidHZW9yZ2lhJywgc2VyaWY7Zm9udC1zaXplOjE1MHB4O2ZpbGw6cmdiKDI4LDQzLDU2KTsiPk48L3RleHQ+CiAgICA8L2c+CiAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjQxNDUwOCwwLDAsMC4yNzYzMzksLTM3LjMwNTcsLTE3LjU0NzUpIj4KICAgICAgICA8cGF0aCBkPSJNMjA1LDMzMy41QzIwNSwzMzQuMzI4IDIwNC41NTIsMzM1IDIwNCwzMzVMOTEsMzM1QzkwLjQ0OCwzMzUgOTAsMzM0LjMyOCA5MCwzMzMuNUM5MCwzMzIuNjcyIDkwLjQ0OCwzMzIgOTEsMzMyTDIwNCwzMzJDMjA0LjU1MiwzMzIgMjA1LDMzMi42NzIgMjA1LDMzMy41WiIgc3R5bGU9ImZpbGw6cmdiKDI4LDQzLDU2KTsiLz4KICAgIDwvZz4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNDE0NTA4LDAsMCwwLjI3NjMzOSwtMjI1LjkwNywtMTcuNTQ3NSkiPgogICAgICAgIDxwYXRoIGQ9Ik0xNTEwLDMzMy41QzE1MTAsMzM0LjMyOCAxNTA5LjU1LDMzNSAxNTA5LDMzNUwxMzk2LDMzNUMxMzk1LjQ1LDMzNSAxMzk1LDMzNC4zMjggMTM5NSwzMzMuNUMxMzk1LDMzMi42NzIgMTM5NS40NSwzMzIgMTM5NiwzMzJMMTUwOSwzMzJDMTUwOS41NSwzMzIgMTUxMCwzMzIuNjcyIDE1MTAsMzMzLjVaIiBzdHlsZT0iZmlsbDpyZ2IoMjgsNDMsNTYpOyIvPgogICAgPC9nPgogICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC40OTM1MzIsMCwwLDAuNDE0NTA4LDIwMC41NDgsODAuMzQzOCkiPgogICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDQ4LDAsMCw0OCwyODEuMDYyLDApIj4KICAgICAgICA8L2c+CiAgICAgICAgPHRleHQgeD0iLTI4MS4wNjJweCIgeT0iMHB4IiBzdHlsZT0iZm9udC1mYW1pbHk6J0hlbHZldGljYSc7Zm9udC1zaXplOjQ4cHg7ZmlsbDpyZ2IoMjgsNDMsNTYpOyI+Zjx0c3BhbiB4PSItMjYwLjA0NnB4IC0yMzYuMzgxcHggLTIwMi4wMDZweCAtMTU0LjM0MnB4IC0xMzMuMzI2cHggLTk4Ljk1cHggLTY0LjU3NXB4IC00Ni4yMzFweCAtMTQuNTUxcHggMTkuODI0cHggNDAuODRweCA2MS44NTZweCA5Ni4yMzJweCAxMTcuMjQ4cHggMTQ4LjkyOHB4IDE2Ny4yNzJweCAyMDEuNjQ3cHggMjM2LjAyMnB4IDI3MC4zOThweCAiIHk9IjBweCAwcHggMHB4IDBweCAwcHggMHB4IDBweCAwcHggMHB4IDBweCAwcHggMHB4IDBweCAwcHggMHB4IDBweCAwcHggMHB4IDBweCAiPnJvbSBub2lzZSB0byBzaWduYWw8L3RzcGFuPjwvdGV4dD4KICAgIDwvZz4KPC9zdmc+Cg==');
 }
 

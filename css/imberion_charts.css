@@ -168,9 +168,10 @@
 .imb-table thead th.sortable.desc::after { content: '\2193'; opacity: 1; }
 
 /* ---------- Charts SVG ---------- */
+/* IMBERION-TOKENS:charts — generado desde imberion-tokens.json. No editar a mano. */
 :root {
-  /* Paleta para series de chart. Series principales en navy y gray-blue;
-     acentos para tercera/cuarta serie y categorias adicionales. */
+
+  /* Series principales */
   --chart-series-1: #0A1828;
   --chart-series-2: #6F859C;
   --chart-series-3: #B2A089;
@@ -181,26 +182,25 @@
   --chart-axis: rgba(10, 24, 40, .45);
   --chart-label: rgba(10, 24, 40, .6);
 
-  /* Roles semanticos sobre la paleta de series. Distintos de series-1..6
-     porque tienen semantica fija: el accent siempre destaca, el neutral
-     siempre marca subtotales o totales. */
-  --chart-series-accent: var(--petrol);    /* el highlight = la senal */
-  --chart-series-accent-2: var(--ochre);   /* 2a serie categorica / contraste de datos */
+  /* Roles semanticos sobre las series */
+  --chart-series-accent: var(--petrol);
+  --chart-series-accent-2: var(--ochre);
   --chart-series-neutral: var(--navy-40);
 
-  /* Bandas, corredores y referencias dentro del area de chart */
+  /* Bandas, corredores y referencias */
   --chart-corridor: rgba(111, 133, 156, .14);
   --chart-iso-curve: var(--navy-20);
   --chart-divider: var(--navy-20);
   --chart-trend: var(--gray-blue);
 
-  /* Heatmaps. Secuencial: low a high. Divergente: 3 stops explicitos. */
+  /* Heatmaps: secuencial low->high y divergente de 3 stops */
   --chart-heatmap-low: rgba(207, 203, 198, .22);
   --chart-heatmap-high: var(--navy);
   --chart-heatmap-diverging-neg: #A8412B;
   --chart-heatmap-diverging-mid: var(--navy-12);
   --chart-heatmap-diverging-pos: #2F7A3D;
 }
+/* IMBERION-TOKENS:charts:fin */
 
 .chart-container {
   position: relative;

@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "nombre": "Imberion design tokens",
+    "owner": "Rodrigo Garrido",
+    "fuente": "Fuente de verdad de los tokens de marca. El bloque :root de imberion_base.css y de imberion_charts.css se GENERA desde aqui. No edites colores a mano en el CSS.",
+    "como_cambiar": "Edita un valor en este archivo y corre: python3 00_imberion/marca/_build_tokens.py  (luego publica con _publish_kit.sh).",
+    "loop_claude_design": "Este JSON se publica al repo publico (imberion-brand) para que Claude Design lo lea y se alinee. Cuando Claude Design proponga mejoras, las devuelve como este mismo JSON; se validan, se regenera el CSS y se publica.",
+    "actualizado": "2026-06-26 (accents petroleo + ochre formalizados)"
+  },
+
+  "color": {
+    "navy":          { "hex": "#0A1828", "desc": "ancla de marca. Texto, superficies oscuras.",
+                       "alpha": { "80": 0.8, "60": 0.6, "40": 0.4, "20": 0.2, "12": 0.12, "06": 0.06 } },
+    "gray-blue":     { "hex": "#6F859C", "desc": "soporte apagado. Captions, eyebrows, UI inactiva." },
+    "beige":         { "hex": "#CFCBC6", "desc": "papel. Fondo claro calido.",
+                       "alpha": { "dark": 0.6 } },
+    "white":         { "hex": "#fff",    "desc": "blanco puro." },
+
+    "petrol":        { "hex": "#1C5F6B", "desc": "accent primario. Frio, tecnico, premium. La senal.",
+                       "alpha": { "12": 0.12, "06": 0.06 } },
+    "petrol-deep":   { "hex": "#11454E", "desc": "petroleo sobre claro (AA en papel). Texto/iconos." },
+    "petrol-bright": { "hex": "#52A0AC", "desc": "petroleo sobre navy. Lineas, KPI, estado activo." },
+
+    "ochre":         { "hex": "#A88A3A", "desc": "accent secundario. Rol de datos.",
+                       "alpha": { "12": 0.14 } },
+    "ochre-deep":    { "hex": "#7E641F", "desc": "ochre sobre claro." },
+    "ochre-bright":  { "hex": "#C7A85A", "desc": "ochre sobre navy." }
+  },
+
+  "type": {
+    "display": "'Cormorant Garamond', Georgia, serif",
+    "body":    "'DM Sans', system-ui, -apple-system, sans-serif",
+    "mono":    "'JetBrains Mono', 'SF Mono', Menlo, Monaco, Consolas, monospace"
+  },
+
+  "layout": {
+    "max": "1140px",
+    "r":   "4px"
+  },
+
+  "_semantic_doc": "Capa de roles + alias --imb-*. NO son colores nuevos: apuntan a la paleta de arriba. Existe para que el design system (Claude Design) y builds que piensan en --accent/--fg/--bg/--imb-* tomen del kit en vez de redefinir local. Cambiar el rol = cambiar a que token apunta, aqui.",
+  "semantic": {
+    "imb-navy":        "var(--navy)",
+    "imb-navy-80":     "var(--navy-80)",
+    "imb-navy-60":     "var(--navy-60)",
+    "imb-navy-40":     "var(--navy-40)",
+    "imb-navy-20":     "var(--navy-20)",
+    "imb-navy-12":     "var(--navy-12)",
+    "imb-navy-06":     "var(--navy-06)",
+    "imb-slate":       "var(--gray-blue)",
+    "imb-paper":       "var(--beige)",
+    "imb-white":       "var(--white)",
+    "imb-petrol":      "var(--petrol)",
+    "imb-petrol-deep": "var(--petrol-deep)",
+    "imb-petrol-bright":"var(--petrol-bright)",
+    "imb-ochre":       "var(--ochre)",
+    "imb-ochre-deep":  "var(--ochre-deep)",
+    "imb-ochre-bright":"var(--ochre-bright)",
+
+    "bg":            "var(--beige)",
+    "bg-dark":       "var(--navy)",
+    "bg-surface":    "var(--white)",
+    "fg":            "var(--navy)",
+    "fg-muted":      "var(--navy-60)",
+    "fg-subtle":     "var(--navy-40)",
+    "fg-inverse":    "var(--white)",
+    "border":        "var(--navy-12)",
+    "border-strong": "var(--navy-20)",
+    "eyebrow":       "var(--gray-blue)",
+
+    "accent":         "var(--petrol)",
+    "accent-strong":  "var(--petrol-deep)",
+    "accent-on-dark": "var(--petrol-bright)",
+    "accent-data":    "var(--ochre)",
+
+    "font-serif": "var(--font-display)",
+    "font-sans":  "var(--font-body)"
+  },
+
+  "_charts_doc": "Paleta de charts. Valores literales (hex/rgba) son tunables; los var(--x) heredan de la paleta base. Genera el :root de imberion_charts.css.",
+  "charts": {
+    "chart-series-1": "#0A1828",
+    "chart-series-2": "#6F859C",
+    "chart-series-3": "#B2A089",
+    "chart-series-4": "#4D6A85",
+    "chart-series-5": "#8FA3B8",
+    "chart-series-6": "#C7A98F",
+    "chart-gridline": "rgba(207, 203, 198, .9)",
+    "chart-axis":     "rgba(10, 24, 40, .45)",
+    "chart-label":    "rgba(10, 24, 40, .6)",
+
+    "chart-series-accent":   "var(--petrol)",
+    "chart-series-accent-2": "var(--ochre)",
+    "chart-series-neutral":  "var(--navy-40)",
+
+    "chart-corridor":  "rgba(111, 133, 156, .14)",
+    "chart-iso-curve": "var(--navy-20)",
+    "chart-divider":   "var(--navy-20)",
+    "chart-trend":     "var(--gray-blue)",
+
+    "chart-heatmap-low":            "rgba(207, 203, 198, .22)",
+    "chart-heatmap-high":           "var(--navy)",
+    "chart-heatmap-diverging-neg":  "#A8412B",
+    "chart-heatmap-diverging-mid":  "var(--navy-12)",
+    "chart-heatmap-diverging-pos":  "#2F7A3D"
+  }
+}
