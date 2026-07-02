@@ -5,7 +5,7 @@
     "fuente": "Fuente de verdad de los tokens de marca. El bloque :root de imberion_base.css y de imberion_charts.css se GENERA desde aqui. No edites colores a mano en el CSS.",
     "como_cambiar": "Edita un valor en este archivo y corre: python3 00_imberion/marca/_build_tokens.py  (luego publica con _publish_kit.sh).",
     "loop_claude_design": "Este JSON se publica al repo publico (imberion-brand) para que Claude Design lo lea y se alinee. Cuando Claude Design proponga mejoras, las devuelve como este mismo JSON; se validan, se regenera el CSS y se publica.",
-    "actualizado": "2026-06-26 (accents petroleo + ochre formalizados)"
+    "actualizado": "2026-07-02 (capa 'signal' anadida a semantic; propuesta de Claude Design, cero cambio de hex)"
   },
 
   "color": {
@@ -72,6 +72,12 @@
     "accent-strong":  "var(--petrol-deep)",
     "accent-on-dark": "var(--petrol-bright)",
     "accent-data":    "var(--ochre)",
+
+    "_signal_doc": "La senal como rol funcional (alias de accent con el nombre de marca). El sitio apunta su --signal a estos. Contencion: la senal aparece SOLO en lineas de acento, hover y KPI, nunca como relleno de superficie ni color de parrafo.",
+    "signal":         "var(--petrol-bright)",
+    "signal-on-dark": "var(--petrol-bright)",
+    "signal-ink":     "var(--petrol-deep)",
+    "signal-line":    "var(--petrol)",
 
     "font-serif": "var(--font-display)",
     "font-sans":  "var(--font-body)"
